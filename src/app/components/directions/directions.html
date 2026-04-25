@@ -2,14 +2,18 @@
   <div class="section-head">
     <h2 id="yonalishlar-title">Yo'nalishlar</h2>
     <p>
-      Hamjihat loyihasi ushbu yo'nalishlarni qamrab oladi va har bir yo'nalish bo'yicha loyihalarni
-      ochiq kuzatish imkonini beradi.
+      Asosiy yo‘nalishlar bo‘yicha loyihalarni ochiq kuzating.
     </p>
   </div>
 
   <div class="direction-grid">
     @for (item of directions; track item.title) {
-      <article class="direction-card">
+      <article class="direction-card" [style.--accent-rgb]="item.accentRgb">
+        <span class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" focusable="false">
+            <path [attr.d]="item.iconPath" />
+          </svg>
+        </span>
         <h3>{{ item.title }}</h3>
         <p>{{ item.description }}</p>
       </article>

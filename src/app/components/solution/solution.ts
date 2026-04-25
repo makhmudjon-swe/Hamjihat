@@ -20,17 +20,17 @@ export class SolutionComponent {
       id: 1,
       shortLabel: "Loyihalarni ko'rish",
       title: "1. Loyihalarni ochiq ko'rish",
-      subtitle: "Barcha ma'lumotlar bir joyda",
+      subtitle: "Ma’lumotlar bitta joyda",
       description:
-        "Hududingizdagi davlat loyihalarini xarita yoki ro'yxat orqali ko'ring. Har bir loyiha bo'yicha asosiy ma'lumotlar ochiq taqdim etiladi.",
+        "Hududingizdagi loyihalarni xarita yoki ro‘yxatda ko‘ring. Asosiy ma’lumotlar ochiq ko‘rsatiladi.",
     },
     {
       id: 2,
       shortLabel: 'Holatni baholash',
       title: '2. Real holatni baholash',
-      subtitle: 'Aholi asosiy nazoratchi',
+      subtitle: 'Aholi — asosiy nazoratchi',
       description:
-        "Foydalanuvchilar loyiha tugagan yoki yo'qligini belgilaydi, sifatiga baho beradi va fikr qoldiradi.",
+        "Holatni belgilang, sifatga baho bering va fikr qoldiring.",
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ export class SolutionComponent {
       title: '3. Dalillar bilan fikr bildirish',
       subtitle: 'Foto va video orqali tasdiqlang',
       description:
-        "Har bir foydalanuvchi loyiha holatini rasm yoki video orqali ko'rsatishi mumkin. Bu shaffoflikni oshiradi.",
+        "Rasm/video bilan tasdiqlang — shaffoflik oshadi.",
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ export class SolutionComponent {
       title: '4. Muammolarni aniqlash',
       subtitle: 'Tizim avtomatik signal beradi',
       description:
-        "Agar loyiha bo'yicha salbiy fikrlar ko'paysa, tizim uni muammoli sifatida belgilab e'tiborga chiqaradi.",
+        "Salbiy fikrlar ko‘paysa, tizim loyiha bo‘yicha signal beradi.",
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ export class SolutionComponent {
       title: '5. Reyting va tahlil',
       subtitle: 'Qaysi hudud yaxshiroq ishlayapti?',
       description:
-        "Hududlar kesimida reyting shakllanadi. Shu orqali samaradorlik va muammoli nuqtalar aniq ko'rinadi.",
+        "Hududlar reytingi orqali samaradorlik va muammoli nuqtalar ko‘rinadi.",
     },
   ];
 

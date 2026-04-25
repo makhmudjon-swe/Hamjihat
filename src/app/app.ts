@@ -7,7 +7,6 @@ import { HeaderComponent } from './components/header/header';
 import { NavbarComponent } from './components/navbar/navbar';
 import { ProblemComponent } from './components/problem/problem';
 import { SolutionComponent } from './components/solution/solution';
-import { TeamComponent } from './components/team/team';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +18,6 @@ import { TeamComponent } from './components/team/team';
     ConsequencesComponent,
     FeaturesComponent,
     DirectionsComponent,
-    TeamComponent,
     AppsComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
