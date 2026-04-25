@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-
 import { AppsComponent } from './components/apps/apps';
 import { ConsequencesComponent } from './components/consequences/consequences';
 import { DirectionsComponent } from './components/directions/directions';

@@ -1,7 +1,18 @@
 <section class="page-section" id="yonalishlar" aria-labelledby="yonalishlar-title">
-  <h2 id="yonalishlar-title">Yo'nalishlar</h2>
-  <p>
-    Keyingi bosqichlarda yo'l, infratuzilma, ta'lim va ijtimoiy yo'nalishlar bo'yicha alohida
-    monitoring oqimlari qo'shiladi.
-  </p>
+  <div class="section-head">
+    <h2 id="yonalishlar-title">Yo'nalishlar</h2>
+    <p>
+      Hamjihat loyihasi ushbu yo'nalishlarni qamrab oladi va har bir yo'nalish bo'yicha loyihalarni
+      ochiq kuzatish imkonini beradi.
+    </p>
+  </div>
+
+  <div class="direction-grid">
+    @for (item of directions; track item.title) {
+      <article class="direction-card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </article>
+    }
+  </div>
 </section>
