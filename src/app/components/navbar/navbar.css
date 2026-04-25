@@ -1,4 +1,3 @@
-/* NAVBAR — dark glass */
 .navbar {
   position: sticky;
   top: 1rem;
@@ -116,12 +115,14 @@
     border-radius: 1.2rem;
     top: 0.75rem;
   }
+
   .nav-list {
     order: 3;
     width: 100%;
     overflow-x: auto;
     padding-bottom: 0.2rem;
   }
+
   .language-switcher {
     margin-left: auto;
     border-left: 0;

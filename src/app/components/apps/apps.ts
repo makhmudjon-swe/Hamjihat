@@ -4,7 +4,6 @@ interface FeatureItem {
   id: string;
   name: string;
   image: string;
-  problem: string;
   solution: string;
   result: string;
 }
@@ -22,53 +21,59 @@ export class AppsComponent {
   features: FeatureItem[] = [
     {
       id: '01',
-      name: 'Diqqatni jamlash',
+      name: 'Xavfsiz kirish',
       image: '/img.png',
-      problem: "Dars paytida chalg‘ituvchi ilovalar diqqatni bo‘ladi.",
-      solution: "Dars rejimi: chalg‘ituvchi ilovalar vaqtincha bloklanadi.",
-      result: "Diqqat va samaradorlik oshadi."
+      solution:
+        "OneID orqali foydalanuvchini tez va ishonchli tarzda platformaga ulaydi.",
+      result:
+        "Kirish jarayoni soddalashadi va foydalanuvchi loyihalarni kuzatishni darhol boshlaydi.",
     },
     {
       id: '02',
       name: 'Joylashuv va xavfsizlik',
       image: '/img1.png',
-      problem: "Joylashuv bo‘yicha aniq ma’lumot yetishmaydi.",
-      solution: "Real vaqt kuzatuv + xavfsiz hududlar.",
-      result: "Xavfsizlik va xotirjamlik."
+      solution:
+        "Xaritada loyihalar, obyektlar va yaqin nuqtalar qulay qidiruv hamda filtr orqali ko'rsatiladi.",
+      result:
+        "Kerakli manzilni tez topish va hudud bo'yicha aniq tasavvur olish osonlashadi.",
     },
     {
       id: '03',
-      name: "Vaqtni to'g'ri boshqarish",
+      name: 'Loyiha jarayonini kuzatish',
       image: '/img2.png',
-      problem: "Vaqt me’yoridan oshib ketadi.",
-      solution: "Kunlik limitlar va uyqu jadvali.",
-      result: "Tartibli rejim."
+      solution:
+        "Har bir loyiha uchun bosqichlar, muddatlar va joriy bajarilish holati bitta sahifada jamlanadi.",
+      result:
+        "Ishlarning qaysi bosqichda ekanini tushunish yengillashadi va kechikishlar tez seziladi.",
     },
     {
       id: '04',
-      name: 'Aniq statistika va nazorat',
+      name: 'Muammo haqida xabar berish',
       image: '/img3.png',
-      problem: "Sarflangan vaqtni aniq ko‘rish qiyin.",
-      solution: "Kunlik/haftalik statistika.",
-      result: "To‘g‘ri xulosa va nazorat."
+      solution:
+        "Muammo turi, batafsil tavsif va foto dalillarni bir joyning o'zida yuborish mumkin.",
+      result:
+        "Murojaatlar tartibli yuboriladi va mas'ullarga yetkazish jarayoni ancha qulaylashadi.",
     },
     {
       id: '05',
-      name: 'Zararli ilovalardan himoya',
+      name: 'Profil va nazorat',
       image: '/img4.png',
-      problem: "Zararli kontent xavfi bor.",
-      solution: "Filtr va bloklash sozlamalari.",
-      result: "Xavfsiz muhit."
-    }
+      solution:
+        "Foydalanuvchi o'z yuborgan muammolari, bildirishnomalari va joylashuv sozlamalarini profil orqali boshqaradi.",
+      result:
+        "Shaxsiy nazorat kuchayadi, murojaatlar holati va ogohlantirishlar bir joyda saqlanadi.",
+    },
   ];
 
   @HostListener('window:scroll')
   onScroll() {
     const sectionEl = this.section();
     if (!sectionEl) return;
+
     const rect = sectionEl.nativeElement.getBoundingClientRect();
     const sectionTop = rect.top;
-    
+
     if (sectionTop > 0) {
       if (this.activeIndex() !== 0) this.activeIndex.set(0);
       return;
@@ -76,12 +81,12 @@ export class AppsComponent {
 
     const scrolled = -sectionTop;
     const windowHeight = window.innerHeight;
-    
+
     let index = Math.floor((scrolled + windowHeight / 2) / windowHeight);
-    
+
     if (index < 0) index = 0;
     if (index >= this.features.length) index = this.features.length - 1;
-    
+
     if (this.activeIndex() !== index) {
       this.activeIndex.set(index);
     }

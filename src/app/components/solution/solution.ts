@@ -20,41 +20,37 @@ export class SolutionComponent {
       id: 1,
       shortLabel: "Loyihalarni ko'rish",
       title: "1. Loyihalarni ochiq ko'rish",
-      subtitle: "Ma’lumotlar bitta joyda",
+      subtitle: "Ma'lumotlar bitta joyda",
       description:
-        "Hududingizdagi loyihalarni xarita yoki ro‘yxatda ko‘ring. Asosiy ma’lumotlar ochiq ko‘rsatiladi.",
+        "Hududingizdagi loyihalarni xarita yoki ro'yxatda ko'ring. Asosiy ma'lumotlar ochiq ko'rsatiladi.",
     },
     {
       id: 2,
       shortLabel: 'Holatni baholash',
       title: '2. Real holatni baholash',
-      subtitle: 'Aholi — asosiy nazoratchi',
-      description:
-        "Holatni belgilang, sifatga baho bering va fikr qoldiring.",
+      subtitle: 'Aholi asosiy nazoratchi',
+      description: "Holatni belgilang, sifatga baho bering va fikr qoldiring.",
     },
     {
       id: 3,
       shortLabel: 'Dalillar bilan fikr',
       title: '3. Dalillar bilan fikr bildirish',
       subtitle: 'Foto va video orqali tasdiqlang',
-      description:
-        "Rasm/video bilan tasdiqlang — shaffoflik oshadi.",
+      description: "Rasm va video bilan tasdiqlang, shaffoflik oshadi.",
     },
     {
       id: 4,
       shortLabel: 'Muammoni aniqlash',
       title: '4. Muammolarni aniqlash',
       subtitle: 'Tizim avtomatik signal beradi',
-      description:
-        "Salbiy fikrlar ko‘paysa, tizim loyiha bo‘yicha signal beradi.",
+      description: "Salbiy fikrlar ko'paysa, tizim loyiha bo'yicha signal beradi.",
     },
     {
       id: 5,
       shortLabel: 'Reyting va tahlil',
       title: '5. Reyting va tahlil',
       subtitle: 'Qaysi hudud yaxshiroq ishlayapti?',
-      description:
-        "Hududlar reytingi orqali samaradorlik va muammoli nuqtalar ko‘rinadi.",
+      description: "Hududlar reytingi orqali samaradorlik va muammoli nuqtalar ko'rinadi.",
     },
   ];
 

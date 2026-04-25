@@ -3,8 +3,8 @@
 }
 
 .site-footer {
-  margin-top: 0.9rem;
-  padding: clamp(1.35rem, 2.8vw, 2.1rem);
+  margin-top: var(--section-gap);
+  padding: var(--section-padding);
   border-radius: 0;
   border: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.09);
@@ -19,7 +19,7 @@
 
 .footer-brand h2 {
   margin: 0;
-  color: #f8fafc;
+  color: var(--accent-2);
   font-size: clamp(2rem, 3.2vw, 3rem);
   line-height: 1.05;
   letter-spacing: 0.02em;

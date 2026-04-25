@@ -1,6 +1,6 @@
 .page-section {
-  margin-top: 1rem;
-  padding: clamp(1.5rem, 3vw, 2.4rem);
+  margin-top: var(--section-gap);
+  padding: var(--section-padding);
   border-radius: var(--radius-xl);
   border: 0;
   background: transparent;
@@ -37,6 +37,7 @@ h2 {
   margin: 0.65rem 0 0;
   color: var(--muted);
   line-height: 1.7;
+  font-size: var(--section-lead-size);
 }
 
 .card-grid {

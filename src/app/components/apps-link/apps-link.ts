@@ -2,10 +2,10 @@ import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-link',
+  selector: 'app-apps-link',
   imports: [NgOptimizedImage],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './final-cta.html',
-  styleUrl: './final-cta.css',
+  templateUrl: './apps-link.html',
+  styleUrl: './apps-link.css',
 })
-export class FinalCtaComponent {}
+export class AppsLinkComponent {}

@@ -15,7 +15,7 @@
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 96px 96px; /* big grid */
+  background-size: 96px 96px;
   opacity: 0.14;
 }
 
@@ -25,7 +25,6 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  /* subtle vignette so grid blends */
   background:
     radial-gradient(ellipse at 50% 0%, rgba(0, 0, 0, 0.25) 0%, transparent 55%),
     radial-gradient(ellipse at 50% 100%, rgba(0, 0, 0, 0.3) 0%, transparent 55%);
@@ -34,7 +33,7 @@
 
 .landing-page {
   max-width: 1440px;
-  min-height: 108dvh;
+  min-height: 100dvh;
   margin: 0 auto;
   padding: 1rem 2rem 2rem;
 }

@@ -13,13 +13,13 @@ type NavLink = {
 })
 export class NavbarComponent {
   protected readonly links: ReadonlyArray<NavLink> = [
-    { label: 'Muammo', href: '#muammo' },
-    { label: 'Oqibatlar', href: '#oqibatlar' },
-    { label: 'Yechim', href: '#yechim' },
-    { label: 'Imkoniyatlar', href: '#imkoniyatlar' },
-    { label: "Yo'nalishlar", href: '#yonalishlar' },
-    { label: 'Jamoamiz', href: '#jamoamiz' },
-    { label: 'Ilovalar', href: '#ilovalar' },
+    { label: 'Muammo', href: '#problem' },
+    { label: 'Oqibatlar', href: '#consequences' },
+    { label: 'Yechim', href: '#solution' },
+    { label: 'Imkoniyatlar', href: '#features' },
+    { label: "Yo'nalishlar", href: '#directions' },
+    { label: 'Qanday ishlaydi', href: '#how-it-works' },
+    { label: 'Yuklab olish', href: '#download-app' },
   ];
 
   protected readonly languages: ReadonlyArray<string> = ['UZ', 'EN', 'RU'];

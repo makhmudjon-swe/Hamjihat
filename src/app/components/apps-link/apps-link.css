@@ -4,8 +4,8 @@
 
 .final-cta {
   position: relative;
-  margin-top: 1.25rem;
-  padding: clamp(1.15rem, 2.6vw, 1.9rem);
+  margin-top: var(--section-gap);
+  padding: var(--section-padding);
   border-radius: 1.8rem;
   overflow: hidden;
   display: grid;
@@ -44,9 +44,9 @@
 .cta-copy h2 {
   margin: 0;
   color: #ffffff;
-  line-height: 1.18;
-  font-size: clamp(1.7rem, 3.2vw, 2.55rem);
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-size: var(--section-title-size);
+  font-weight: 700;
 }
 
 .cta-copy h2 span {
@@ -59,7 +59,7 @@
   margin: 0.8rem 0 0;
   max-width: 42rem;
   color: #e2e8f0;
-  font-size: clamp(0.95rem, 1.35vw, 1.08rem);
+  font-size: var(--section-lead-size);
   line-height: 1.7;
 }
 

@@ -1,25 +1,12 @@
-<section class="how-it-works-section" id="ilovalar" aria-labelledby="ilovalar-title" #section>
+<section class="how-it-works-section" id="how-it-works" aria-labelledby="how-it-works-title" #section>
   <div class="bg-grid"></div>
 
   <div class="sticky-wrapper">
-    <h2 class="main-title" id="ilovalar-title">Platforma qanday ishlaydi?</h2>
+    <h2 class="main-title" id="how-it-works-title">Platforma qanday ishlaydi?</h2>
 
     <div class="feature-section">
       <div class="container">
-        <!-- LEFT PANEL: Cards -->
         <div class="left-panel">
-          <div class="card card-orange">
-            <h3>
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="28" height="28" focusable="false">
-                  <path d="M12 2 1 21h22L12 2Zm1 15h-2v-2h2v2Zm0-4h-2V9h2v4Z" />
-                </svg>
-              </span>
-              Muammo
-            </h3>
-            <p>{{ features[activeIndex()].problem }}</p>
-          </div>
-
           <div class="card card-green">
             <h3>
               <span class="card-icon" aria-hidden="true">
@@ -47,7 +34,6 @@
           </div>
         </div>
 
-        <!-- CENTER PANEL: Image -->
         <div class="center-panel">
           <div class="phone-frame">
             @for (feature of features; track feature.id; let i = $index) {
@@ -58,7 +44,6 @@
           </div>
         </div>
 
-        <!-- RIGHT PANEL: Navigation list -->
         <div class="right-panel">
           <div class="right-content">
             <div class="big-number">{{ features[activeIndex()].id }}</div>
@@ -84,7 +69,6 @@
     </div>
   </div>
 
-  <!-- Scroll Spacers to create scrollable area -->
   <div class="scroll-spacers">
     @for (feature of features; track feature.id) {
       <div class="spacer"></div>
