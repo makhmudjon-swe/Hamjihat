@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+}
+
+.landing-page {
+  max-width: 1240px;
+  min-height: 108dvh;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 4.5rem;
+}

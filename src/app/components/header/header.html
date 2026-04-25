@@ -1,0 +1,26 @@
+<header class="hero" id="home">
+  <div class="hero-copy">
+    <div class="feature-pills" aria-label="Asosiy imkoniyatlar">
+      @for (feature of features; track feature.label) {
+        <span class="feature-pill">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+            <path [attr.d]="feature.iconPath" />
+          </svg>
+          <span>{{ feature.label }}</span>
+        </span>
+      }
+    </div>
+
+    <p class="eyebrow">Yangi avlod platformasi</p>
+    <h1>Hududingizdagi o'zgarishlarni kuzating.</h1>
+    <p class="lead">
+      Davlat loyihalari va ajratilgan mablag'larning haqiqiy ijrosini fuqarolar bilan birga kuzatish
+      platformasi.
+    </p>
+
+    <div class="actions">
+      <a class="primary" href="#contact">Bepul boshlash</a>
+      <a class="secondary" href="#features">Ko'proq ma'lumot</a>
+    </div>
+  </div>
+</header>

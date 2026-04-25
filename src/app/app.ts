@@ -1,12 +1,30 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+import { AppsComponent } from './components/apps/apps';
+import { ConsequencesComponent } from './components/consequences/consequences';
+import { DirectionsComponent } from './components/directions/directions';
+import { FeaturesComponent } from './components/features/features';
+import { HeaderComponent } from './components/header/header';
+import { NavbarComponent } from './components/navbar/navbar';
+import { ProblemComponent } from './components/problem/problem';
+import { SolutionComponent } from './components/solution/solution';
+import { TeamComponent } from './components/team/team';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    NavbarComponent,
+    HeaderComponent,
+    ProblemComponent,
+    SolutionComponent,
+    ConsequencesComponent,
+    FeaturesComponent,
+    DirectionsComponent,
+    TeamComponent,
+    AppsComponent,
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('Hamjihat');
-}
+export class App {}

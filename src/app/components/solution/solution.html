@@ -1,0 +1,38 @@
+<section class="solution-section" id="yechim" aria-labelledby="yechim-title">
+  <div class="section-head">
+    <h2 id="yechim-title">Muammoni qanday hal qilamiz?</h2>
+    <p>
+      Hamjihat platformasi orqali davlat loyihalari ustidan jamoatchilik nazorati yo'lga qo'yiladi.
+      Har bir fuqaro real holatni ko'rib, baholashi va muammolarni ochiq bildirib borishi mumkin.
+    </p>
+  </div>
+
+  <div class="step-tabs" role="tablist" aria-label="Yechim jarayoni bosqichlari">
+    @for (step of steps; track step.id) {
+      <button
+        type="button"
+        role="tab"
+        class="step-tab"
+        [class.active]="activeStepId() === step.id"
+        [attr.id]="'solution-step-tab-' + step.id"
+        [attr.aria-controls]="'solution-step-panel-' + step.id"
+        [attr.aria-selected]="activeStepId() === step.id"
+        (click)="setActiveStep(step.id)"
+      >
+        <span class="index">0{{ step.id }}</span>
+        <span class="label">{{ step.shortLabel }}</span>
+      </button>
+    }
+  </div>
+
+  <article
+    class="step-panel"
+    role="tabpanel"
+    [attr.id]="'solution-step-panel-' + activeStep().id"
+    [attr.aria-labelledby]="'solution-step-tab-' + activeStep().id"
+  >
+    <h3>{{ activeStep().title }}</h3>
+    <p class="subtitle">{{ activeStep().subtitle }}</p>
+    <p class="description">{{ activeStep().description }}</p>
+  </article>
+</section>

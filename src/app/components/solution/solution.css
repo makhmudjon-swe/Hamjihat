@@ -1,0 +1,110 @@
+.solution-section {
+  margin-top: 1rem;
+  padding: clamp(1.5rem, 3.2vw, 2.4rem);
+  border-radius: 1.35rem;
+  border: 1px dashed rgba(30, 41, 59, 0.28);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.section-head {
+  max-width: 62rem;
+}
+
+.section-head h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+}
+
+.section-head p {
+  margin: 0.7rem 0 0;
+  color: #334155;
+  line-height: 1.75;
+}
+
+.step-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.step-tab {
+  display: grid;
+  gap: 0.3rem;
+  text-align: left;
+  padding: 0.8rem 0.88rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(248, 250, 252, 0.8);
+  color: #0f172a;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.step-tab:hover,
+.step-tab:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.58);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+}
+
+.step-tab.active {
+  border-color: rgba(59, 130, 246, 0.82);
+  background: rgba(219, 234, 254, 0.8);
+}
+
+.step-tab .index {
+  font-size: 0.8rem;
+  color: #0369a1;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.step-tab .label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.step-panel {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(59, 130, 246, 0.32);
+  background: rgba(239, 246, 255, 0.65);
+}
+
+.step-panel h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(1.08rem, 1.8vw, 1.32rem);
+}
+
+.step-panel .subtitle {
+  margin: 0.45rem 0 0;
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.step-panel .description {
+  margin: 0.65rem 0 0;
+  color: #334155;
+  line-height: 1.75;
+}
+
+@media (max-width: 1060px) {
+  .step-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .step-tabs {
+    grid-template-columns: 1fr;
+  }
+}
