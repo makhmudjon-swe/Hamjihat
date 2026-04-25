@@ -29,7 +29,7 @@
 .section-head h2 {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  font-size: var(--section-title-size);
   font-weight: 700;
 }
 
@@ -58,7 +58,11 @@
   background: rgba(255, 255, 255, 0.04);
   color: var(--muted);
   cursor: pointer;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .step-tab:hover,
@@ -118,8 +122,12 @@
 }
 
 @media (max-width: 1060px) {
-  .step-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .step-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 @media (max-width: 620px) {
-  .step-tabs { grid-template-columns: 1fr; }
+  .step-tabs {
+    grid-template-columns: 1fr;
+  }
 }

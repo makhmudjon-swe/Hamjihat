@@ -20,6 +20,8 @@
 
   --radius-lg: 1.25rem;
   --radius-xl: 1.75rem;
+
+  --section-title-size: clamp(1.5rem, 2.6vw, 2.1rem);
 }
 
 * {

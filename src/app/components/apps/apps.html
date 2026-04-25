@@ -1,48 +1,49 @@
 <section class="how-it-works-section" id="ilovalar" aria-labelledby="ilovalar-title" #section>
   <div class="bg-grid"></div>
 
-  <div class="sticky-wrapper py-20">
+  <div class="sticky-wrapper">
     <h2 class="main-title" id="ilovalar-title">Platforma qanday ishlaydi?</h2>
 
     <div class="feature-section">
       <div class="container">
-        
         <!-- LEFT PANEL: Cards -->
         <div class="left-panel">
           <div class="card card-orange">
             <h3>
               <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="28" height="28" focusable="false">
-                  <path d="M12 2 1 21h22L12 2Zm1 15h-2v-2h2v2Zm0-4h-2V9h2v4Z"/>
+                  <path d="M12 2 1 21h22L12 2Zm1 15h-2v-2h2v2Zm0-4h-2V9h2v4Z" />
                 </svg>
               </span>
               Muammo
             </h3>
-            <p>{{features[activeIndex()].problem}}</p>
+            <p>{{ features[activeIndex()].problem }}</p>
           </div>
 
           <div class="card card-green">
             <h3>
               <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="28" height="28" focusable="false">
-                  <path d="M9 21h6v-1H9v1Zm3-20a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3.26A7 7 0 0 0 12 1Zm2 12.16-.5.35V16h-3v-1h2v-2h-2V8h-2v5H8.5v-1.49l-.5-.35A5 5 0 1 1 14 13.16Z"/>
+                  <path
+                    d="M9 21h6v-1H9v1Zm3-20a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3.26A7 7 0 0 0 12 1Zm2 12.16-.5.35V16h-3v-1h2v-2h-2V8h-2v5H8.5v-1.49l-.5-.35A5 5 0 1 1 14 13.16Z"
+                  />
                 </svg>
               </span>
               Yechim
             </h3>
-            <p>{{features[activeIndex()].solution}}</p>
+            <p>{{ features[activeIndex()].solution }}</p>
           </div>
 
           <div class="card card-result">
             <h3>
               <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="28" height="28" focusable="false">
-                  <path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"/>
+                  <path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z" />
                 </svg>
               </span>
               Natija
             </h3>
-            <p>{{features[activeIndex()].result}}</p>
+            <p>{{ features[activeIndex()].result }}</p>
           </div>
         </div>
 
@@ -51,7 +52,7 @@
           <div class="phone-frame">
             @for (feature of features; track feature.id; let i = $index) {
               @if (activeIndex() === i) {
-                <img [src]="feature.image" [alt]="feature.name" class="phone-img">
+                <img [src]="feature.image" [alt]="feature.name" class="phone-img" />
               }
             }
           </div>
@@ -60,16 +61,17 @@
         <!-- RIGHT PANEL: Navigation list -->
         <div class="right-panel">
           <div class="right-content">
-            <div class="big-number">{{features[activeIndex()].id}}</div>
+            <div class="big-number">{{ features[activeIndex()].id }}</div>
             <ul class="feature-nav">
               @for (nav of features; track nav.id; let j = $index) {
-                <li 
+                <li
                   [class.active]="activeIndex() === j"
                   (click)="activeIndex.set(j)"
                   role="button"
-                  [attr.aria-pressed]="activeIndex() === j">
-                  <span class="nav-count">{{nav.id}}</span>
-                  <span class="text">{{nav.name}}</span>
+                  [attr.aria-pressed]="activeIndex() === j"
+                >
+                  <span class="nav-count">{{ nav.id }}</span>
+                  <span class="text">{{ nav.name }}</span>
                   @if (activeIndex() === j) {
                     <span class="dot"></span>
                   }
@@ -78,7 +80,6 @@
             </ul>
           </div>
         </div>
-
       </div>
     </div>
   </div>

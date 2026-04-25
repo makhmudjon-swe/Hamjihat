@@ -2,24 +2,28 @@
   <div class="problem-head">
     <h2 id="muammo-title">MUAMMO</h2>
     <p>
-      Ko‘p loyihalar bor, ammo real ijro va natija bo‘yicha aniq, ochiq ma’lumot yetishmaydi.
+      Har bir korrupsiyaviy xatarlar zanjiridagi muhim
+      bo‘g‘in.
     </p>
   </div>
 
   <div class="problem-grid">
-    <article class="problem-card">
-      <h3>Fuqarolar:</h3>
-      <ul>
-        <li>reja va ijroni ko‘ra olmaydi</li>
-        <li>sifatni mustaqil tekshira olmaydi</li>
-      </ul>
-    </article>
-
-    <article class="problem-card">
-      <h3>Yechim zarurati</h3>
-      <p>
-        Loyiha qayerda va qay darajada ekanini ko‘rsatadigan ochiq, tushunarli tizim kerak.
-      </p>
-    </article>
+    @for (item of problemItems; track item.id; let i = $index) {
+      <button
+        class="problem-card"
+        type="button"
+        [class.active]="activeIndex() === i"
+        (click)="activeIndex.set(i)"
+        [attr.aria-pressed]="activeIndex() === i"
+      >
+        <span class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" focusable="false">
+            <path [attr.d]="item.iconPath"></path>
+          </svg>
+        </span>
+        <span class="problem-index">{{ item.id }}</span>
+        <p>{{ item.text }}</p>
+      </button>
+    }
   </div>
 </section>

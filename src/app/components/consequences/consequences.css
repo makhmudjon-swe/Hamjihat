@@ -29,7 +29,7 @@
 h2 {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+  font-size: var(--section-title-size);
   font-weight: 700;
 }
 
@@ -63,14 +63,19 @@ h2 {
   border-top: 1px solid rgba(var(--accent-rgb), 0.45);
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px);
-  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    background 200ms ease;
   cursor: default;
 }
 
 .impact-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 3px;
   background: var(--accent);
   border-radius: 999px 999px 0 0;
@@ -108,7 +113,10 @@ h2 {
   border-radius: 0.8rem;
   background: rgba(var(--accent-rgb), 0.12);
   border: 1px solid rgba(var(--accent-rgb), 0.18);
-  transition: background 200ms ease, transform 200ms ease, border-color 200ms ease;
+  transition:
+    background 200ms ease,
+    transform 200ms ease,
+    border-color 200ms ease;
 }
 
 .impact-card:hover .icon-wrap {
@@ -122,5 +130,7 @@ h2 {
 }
 
 @media (max-width: 900px) {
-  .card-grid { grid-template-columns: 1fr; }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }

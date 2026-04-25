@@ -10,7 +10,10 @@
 
 .bg-grid {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
@@ -22,32 +25,35 @@
 
 .how-it-works-section {
   position: relative;
+  overflow-x: clip;
 }
 
 .sticky-wrapper {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100svh;
+  min-height: 100svh;
+  padding: clamp(0.75rem, 1.8vh, 1.5rem) 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
   z-index: 1;
 }
 
 .scroll-spacers {
   position: relative;
   z-index: 0;
-  margin-top: -100vh;
+  margin-top: -100svh;
 }
 
 .spacer {
-  height: 100vh;
+  height: 100svh;
 }
 
 .main-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: var(--section-title-size);
   font-weight: 700;
   color: var(--fg);
   margin-bottom: 0.75rem;
@@ -66,8 +72,14 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .container {
@@ -78,11 +90,18 @@
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  gap: 2rem;
+  gap: clamp(1rem, 2vw, 2rem);
 }
 
-.left-panel, .right-panel {
+.left-panel,
+.right-panel {
   flex: 1;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 1.3vh, 1.5rem);
 }
 
 .center-panel {
@@ -95,14 +114,17 @@
 .card {
   background: var(--surface);
   border-radius: 1.25rem;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: clamp(1rem, 1.7vh, 1.5rem);
+  margin-bottom: 0;
   border-left: 4px solid transparent;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   border-right: 1px solid rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .card:hover {
@@ -136,7 +158,7 @@
 
 .card h3 {
   margin: 0 0 0.75rem 0;
-  font-size: 1rem;
+  font-size: 1.08rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -190,18 +212,19 @@
 .card p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1.03rem;
   line-height: 1.6;
 }
 
 /* PHONE FRAME */
 .phone-frame {
-  width: 280px;
+  width: clamp(300px, 24vw, 360px);
+  aspect-ratio: 9 / 19.5;
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.35);
+  background: #ffffff;
 }
 
 .phone-frame {
@@ -210,15 +233,22 @@
 
 .phone-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  border-radius: 1.5rem;
+  border-radius: inherit;
+  object-fit: contain;
   animation: imgFadeIn 0.4s ease;
 }
 
 @keyframes imgFadeIn {
-  from { opacity: 0; transform: scale(0.97); }
-  to   { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* RIGHT PANEL */
@@ -228,12 +258,12 @@
 }
 
 .right-content {
-  width: max-content;
-  max-width: 100%;
+  width: min(100%, 26rem);
+  margin-left: auto;
 }
 
 .big-number {
-  font-size: 7rem;
+  font-size: 7.4rem;
   font-weight: 900;
   color: rgba(59, 130, 246, 0.85);
   line-height: 1;
@@ -249,7 +279,7 @@
 }
 
 .feature-nav li {
-  font-size: 1.1rem;
+  font-size: 1.16rem;
   font-weight: 500;
   color: rgba(148, 163, 184, 0.55);
   margin-bottom: 0.85rem;
@@ -272,7 +302,7 @@
 
 .feature-nav li.active {
   color: var(--accent-2);
-  font-size: 1.3rem;
+  font-size: 1.38rem;
   font-weight: 700;
   text-shadow: 0 0 18px rgba(59, 130, 246, 0.18);
 }
@@ -332,3 +362,55 @@
   }
 }
 
+@media (max-height: 840px) {
+  .sticky-wrapper {
+    padding: 0.5rem 0;
+  }
+
+  .container {
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .main-title {
+    font-size: var(--section-title-size);
+    margin-bottom: 0.45rem;
+  }
+
+  .card {
+    padding: 0.9rem 1rem;
+  }
+
+  .card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .card-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .phone-frame {
+    width: clamp(250px, 29vh, 320px);
+  }
+
+  .big-number {
+    font-size: clamp(4.5rem, 11vh, 6rem);
+    margin-bottom: 0.55rem;
+  }
+
+  .feature-nav li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .feature-nav li.active {
+    font-size: 1.12rem;
+  }
+}
