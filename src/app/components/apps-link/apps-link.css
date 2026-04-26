@@ -198,7 +198,13 @@
 }
 
 @media (max-width: 640px) {
+  .cta-actions {
+    flex-direction: column;
+  }
+
   .store-btn {
+    width: 100%;
+    justify-content: center;
     font-size: 0.95rem;
     padding: 0.7rem 1.05rem;
   }
@@ -206,5 +212,9 @@
   .btn-icon {
     width: 1.75rem;
     height: 1.75rem;
+  }
+
+  .cta-visual {
+    min-height: 170px;
   }
 }

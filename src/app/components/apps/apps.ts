@@ -15,6 +15,8 @@ interface FeatureItem {
   styleUrl: './apps.css',
 })
 export class AppsComponent {
+  private readonly mobileBreakpoint = 900;
+
   activeIndex = signal(0);
   section = viewChild<ElementRef<HTMLElement>>('section');
 
@@ -68,6 +70,10 @@ export class AppsComponent {
 
   @HostListener('window:scroll')
   onScroll() {
+    if (window.innerWidth <= this.mobileBreakpoint) {
+      return;
+    }
+
     const sectionEl = this.section();
     if (!sectionEl) return;
 
@@ -90,5 +96,14 @@ export class AppsComponent {
     if (this.activeIndex() !== index) {
       this.activeIndex.set(index);
     }
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    if (window.innerWidth <= this.mobileBreakpoint) {
+      return;
+    }
+
+    this.onScroll();
   }
 }

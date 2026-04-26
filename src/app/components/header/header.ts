@@ -34,10 +34,4 @@ export class HeaderComponent {
         'M11.1 3.52a1 1 0 0 1 1.8 0l8.49 16.04A1 1 0 0 1 20.5 21h-17a1 1 0 0 1-.89-1.44L11.1 3.52ZM12 9a1 1 0 0 0-1 1v4a1 1 0 1 0 2 0v-4a1 1 0 0 0-1-1Zm0 9a1.1 1.1 0 1 0 0-2.2A1.1 1.1 0 0 0 12 18Z',
     },
   ];
-
-  protected readonly stats: ReadonlyArray<StatItem> = [
-    { value: '12K+', label: 'Faol foydalanuvchi' },
-    { value: '48', label: 'Hamkor tashkilot' },
-    { value: '99%', label: 'Mamnunlik darajasi' },
-  ];
 }

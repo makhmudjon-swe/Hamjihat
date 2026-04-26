@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, signal } from '@angular/core';
 
 type NavLink = {
   readonly label: string;
@@ -12,6 +12,8 @@ type NavLink = {
   styleUrl: './navbar.css',
 })
 export class NavbarComponent {
+  private readonly mobileBreakpoint = 920;
+
   protected readonly links: ReadonlyArray<NavLink> = [
     { label: 'Muammo', href: '#problem' },
     { label: 'Oqibatlar', href: '#consequences' },
@@ -24,6 +26,15 @@ export class NavbarComponent {
 
   protected readonly languages: ReadonlyArray<string> = ['UZ', 'EN', 'RU'];
   protected readonly selectedLanguage = signal('UZ');
+  protected readonly isMenuOpen = signal(false);
+
+  protected toggleMenu(): void {
+    this.isMenuOpen.update((isOpen) => !isOpen);
+  }
+
+  protected closeMenu(): void {
+    this.isMenuOpen.set(false);
+  }
 
   protected onLanguageChange(event: Event): void {
     const selectElement = event.target as HTMLSelectElement | null;
@@ -32,5 +43,12 @@ export class NavbarComponent {
     }
 
     this.selectedLanguage.set(selectElement.value);
+  }
+
+  @HostListener('window:resize')
+  protected onResize(): void {
+    if (window.innerWidth > this.mobileBreakpoint && this.isMenuOpen()) {
+      this.isMenuOpen.set(false);
+    }
   }
 }

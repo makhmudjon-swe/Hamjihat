@@ -37,3 +37,19 @@
   margin: 0 auto;
   padding: 1rem 2rem 2rem;
 }
+
+.landing-page > * {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .landing-page {
+    padding: 1rem 1.25rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-page {
+    padding: 0.85rem 1rem 1.25rem;
+  }
+}
